@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+    {%block body%}
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>{{job_details}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+    <div class="job_details_area">
+        <div class="container">
+            <div class="row">
+           
+                <div class="col-lg-4 mx-auto">
+                    <div class="job_sumary">
+                        <div class="summery_header">
+                            <h3>Profile Summery</h3>
+                        </div>
+                         <div class="thumb">
+                            <img class='img_jobs' src="{{profile.imge.url}}" alt="">
+                        </div>
+                        <div class="job_content">
+                            <ul>
+                                <li>Name <span>{{profile}}</span></li>
+                                <li>Email: <span>{{profile.user.email}}</span></li>
+                                <li>Salary: <span>20000$</span></li>
+                                <li>Phone: <span>{{profile.phone_number}}</span></li>
+                                <li>Address <span>{{profile.city}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="boxed-btn3 w-100" href="{% url 'accounts:profile_edit'%}">Edit porfile</a>                         
+
+                    </div>
+                    
+                    <div class="share_wrap d-flex">
+                        <span>Share at:</span>
+                        <ul>
+                            <li><a href="#"> <i class="fa fa-facebook"></i></a> </li>
+                            <li><a href="#"> <i class="fa fa-google-plus"></i></a> </li>
+                            <li><a href="#"> <i class="fa fa-twitter"></i></a> </li>
+                            <li><a href="#"> <i class="fa fa-envelope"></i></a> </li>
+                        </ul>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock body %}
+
